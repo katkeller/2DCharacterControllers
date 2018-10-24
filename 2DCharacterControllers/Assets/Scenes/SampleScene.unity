@@ -277,7 +277,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.13, y: 0.24}
+  m_Size: {x: 0.13, y: 0.21}
   m_EdgeRadius: 0
 --- !u!58 &282500303
 CircleCollider2D:
@@ -291,7 +291,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.1}
+  m_Offset: {x: 0, y: -0.11}
   serializedVersion: 2
   m_Radius: 0.05
 --- !u!50 &282500304
@@ -381,7 +381,7 @@ Animator:
   m_GameObject: {fileID: 282500301}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 936c3c60582816e47a72dfc5f7032ef5, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
