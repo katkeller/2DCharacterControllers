@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 282500302}
   - component: {fileID: 282500307}
   - component: {fileID: 282500308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ MonoBehaviour:
   groundCheck: {fileID: 2082817433}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967039
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,7 +490,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2082817433}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}

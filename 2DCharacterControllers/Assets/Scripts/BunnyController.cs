@@ -12,6 +12,7 @@ public class BunnyController : MonoBehaviour {
     public Transform groundCheck;
     float groundRadius = 0.2f;
     public LayerMask whatIsGround;
+    public float JumpForce = 700f;
 
     Animator bunnyAnimator;
 
@@ -24,6 +25,8 @@ public class BunnyController : MonoBehaviour {
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
         bunnyAnimator.SetBool("Ground", grounded);
+
+        bunnyAnimator.SetFloat("vSpeed", rb2d.velocity.y);
 
         float move = Input.GetAxis("Horizontal");
 
@@ -42,6 +45,15 @@ public class BunnyController : MonoBehaviour {
             Flip();
         }
 	}
+
+    void Update()
+    {
+        if (grounded && Input.GetButtonDown("Jump"))
+        {
+            bunnyAnimator.SetBool("Ground", false);
+            rb2d.AddForce(new Vector2(0, JumpForce));
+        }
+    }
 
     void Flip()
     {
