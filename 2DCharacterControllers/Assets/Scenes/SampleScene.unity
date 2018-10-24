@@ -409,6 +409,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294967039
+  JumpForce: 700
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
