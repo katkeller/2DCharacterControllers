@@ -20,5 +20,22 @@ public class BunnyController : MonoBehaviour {
         //Rigidbody2D.velocity = new Vector2(move * MaxSpeed, Rigidbody2D.velocity.y);
 
         rb2d.velocity = new Vector2(move * MaxSpeed, rb2d.velocity.y);
+
+        if(move > 0 && !FacingRight)
+        {
+            Flip();
+        }
+        else if (move < 0 && FacingRight)
+        {
+            Flip();
+        }
 	}
+
+    void Flip()
+    {
+        FacingRight = !FacingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 }
