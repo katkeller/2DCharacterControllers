@@ -8,6 +8,11 @@ public class BunnyController : MonoBehaviour {
     bool FacingRight = true;
     public Rigidbody2D rb2d;
 
+    bool grounded = false;
+    public Transform groundCheck;
+    float groundRadius = 0.2f;
+    public LayerMask whatIsGround;
+
     Animator bunnyAnimator;
 
     void Start()
@@ -17,6 +22,9 @@ public class BunnyController : MonoBehaviour {
 
     void FixedUpdate ()
     {
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
+        bunnyAnimator.SetBool("Ground", grounded);
+
         float move = Input.GetAxis("Horizontal");
 
         bunnyAnimator.SetFloat("Speed", Mathf.Abs(move));
