@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 282500303}
   - component: {fileID: 282500302}
   - component: {fileID: 282500307}
+  - component: {fileID: 282500308}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -313,7 +314,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &282500305
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -390,6 +391,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &282500308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 282500301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf415e4fc880534f92fcd95b8d548ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxSpeed: 10
+  rb2d: {fileID: 282500304}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

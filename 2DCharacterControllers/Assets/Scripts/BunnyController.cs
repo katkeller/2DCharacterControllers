@@ -8,14 +8,18 @@ public class BunnyController : MonoBehaviour {
     bool FacingRight = true;
     public Rigidbody2D rb2d;
 
-	void Start ()
+    Animator bunnyAnimator;
+
+    void Start()
     {
-		
-	}
-	
-	void FixedUpdate ()
+        bunnyAnimator = GetComponent<Animator>();
+    }
+
+    void FixedUpdate ()
     {
         float move = Input.GetAxis("Horizontal");
+
+        bunnyAnimator.SetFloat("Speed", Mathf.Abs(move));
 
         //Rigidbody2D.velocity = new Vector2(move * MaxSpeed, Rigidbody2D.velocity.y);
 
